@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-b0k-2l=0$e7pduf5$&)sqfdi*+enq&qm0wo7@3(t$1+*y^_t-=
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['http://mosversion2.sinewave.co.in','localhost']
+ALLOWED_HOSTS = ['http://mosversion2.sinewave.co.in', 'localhost']
 CORS_ALLOWED_ORIGINS = [
     'http://localhost:3000',
     # Add other allowed origins if needed
@@ -44,8 +44,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
+    'drf_yasg',
     'tax_calculator',
     'corsheaders',
+
 ]
 
 MIDDLEWARE = [
@@ -131,3 +133,9 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+SWAGGER_SETTINGS = {
+    'DEFAULT_INFO': 'tax_calculator.swagger_info.info',
+    # Other Swagger settings...
+}
